@@ -1,0 +1,4 @@
+dynsettings
+===========
+
+Django dynamic settings
