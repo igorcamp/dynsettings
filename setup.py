@@ -5,11 +5,11 @@ setup(
     version='0.1.0',
     author='Igor Campbell',
     author_email='igorcamp@gmail.com',
-    packages=['dynsettings', ],
+    packages=['dynsettings'],
     license='LICENSE.txt',
     description='Django Dynamic Settings',
-    long_description=open('README.md').read(),
+    long_description=open('README.txt').read(),
     install_requires=[
-        "Django >= 1.1",
+        "Django >= 1.1.1",
     ],
 )

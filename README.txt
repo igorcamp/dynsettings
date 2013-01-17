@@ -5,22 +5,22 @@ Django Dynamic Settings
 Installation
 ============
 
-#. Add ``dynsettings`` to your ``INSTALLED_APPS``::
+1. Add ``dynsettings`` to your ``INSTALLED_APPS``::
 
        INSTALLED_APPS = (
            ...
            'dynsettings',
        )
        
-#. Run syncdb to create dynsettings table.
+2. Run syncdb to create dynsettings table.
 
 Usage
 =============
 
-Import config object to manipulate your settings:
+1. Import config object to manipulate your settings:
     from dynsettings.models import config
 
-Use dynamic settings like a dictionary:
+2. Use dynamic settings like a dictionary:
     import datetime
     
     config['my_data_name'] = u'Today is'
