@@ -27,4 +27,3 @@ Use dynamic settings like a dictionary:
     config['my_data_name2'] = datetime.datetime.now()
     
     print config['my_data_name'], config['my_data_name2'].strftime("%d/%m/%Y")
-    
