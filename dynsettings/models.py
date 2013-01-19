@@ -1,3 +1,4 @@
+from django.conf import settings
 from django.db import models
 from django.db.models.fields import CharField
 import datetime
@@ -49,13 +50,15 @@ class _Config:
         s[0].set(value)
 
     def __getitem__(self, key):
-        s = DynSettings.objects.get_or_create(name=key)
-        return s[0].get()
+        if (DynSettings.objects.filter(name=key)):
+            s = DynSettings.objects.get(name=key)
+            return s.get()
+        else:
+            try:
+                d = settings.DYNSETTINGS
+                return d[key]
+            except:
+                return None
 
 
-config = _Config()
-
-#if ('DYNSETTINGS_CONFIGS' in dir(settings)):
-#    d = settings.DYNSETTINGS_CONFIGS
-#    for v, k in d.items():
-#        config[k] = v
+dynsettings = _Config()
