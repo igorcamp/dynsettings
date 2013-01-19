@@ -5,29 +5,33 @@ Django Dynamic Settings
 Installation
 ============
 
-1. Add ``dynsettings`` to your ``INSTALLED_APPS``::
-
+1. Add ``dynsettings`` to your ``INSTALLED_APPS``:
+<pre>
        INSTALLED_APPS = (
            ...
            'dynsettings',
        )
+</pre>
        
 2. Run syncdb to create dynsettings table.
 
 Usage
 =============
 
-1. Import config object to manipulate your settings:
-    from dynsettings.models import config
+1. Import dynsettings object to manipulate your settings:
+	<pre>
+	from dynsettings.models import dynsettings
+	</pre>
 
-2. Define your initial settings values (optional):
-
+2. Define your initial settings values in your settings.py (optional):
+	<pre>
 	DYNSETTINGS = {
 		'my_initial_data': 12345
 	}
+	</pre>
 
-2. Use dynamic settings like a dictionary:
-    from dynsettings.models import dynsettings
+3. Use dynamic settings like a dictionary:
+	<pre>
     import datetime
     
     dynsettings['my_data_name'] = u'Today is'
@@ -39,8 +43,9 @@ Usage
     dynsettings['my_initial_data'] = "abcd"
     
     print dynsettings['my_initial_data']
+	</pre>
     
-The code above will print the following output:
-    >>> Today is 18/01/2013
-    >>> 12345
-    >>> abcd
+	The code above will print the following output: <br />
+\>\>\> Today is 18/01/2013 <br />
+\>\>\> 12345<br />
+\>\>\> abcd
