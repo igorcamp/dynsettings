@@ -12,4 +12,5 @@ setup(
     install_requires=[
         "Django >= 1.1.1",
     ],
+    url='https://github.com/igorcamp/dynsettings',
 )
