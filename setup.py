@@ -8,7 +8,7 @@ setup(
     packages=['dynsettings'],
     license='LICENSE.txt',
     description='Django Dynamic Settings',
-    long_description=open('README.txt').read(),
+    long_description=open('README.md').read(),
     install_requires=[
         "Django >= 1.1.1",
     ],
